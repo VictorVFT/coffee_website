@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+.navbar {
+    position: absolute; /*Permite posicionar de forma absoluta(exibição prioritária) em relação a um elemento pai com 'position:relative' e usar tags de posicionamento (bottom, left, top...). */
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0); /*a letra 'A' permite ajustar a opacidade*/
+    padding: 15px 0;
+    z-index:1000;
+    display: flex;
+    justify-content: center;    
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color:#f3d382;
+}
+
+.hero {
+    height: 100vh ; /*ocupa todo o tamanho da tela.*/
+    max-height: 100vh;
+    overflow:hidden; /*torna tudo que é elemento do hero e ultrapassa o hero, invisivel.*/
+    background-image: url('hero/capa-cafe.jpg'); /*imagem de fundo*/
+    background-size: cover; /*faz com que a imagem não sofra distorção*/
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-size: 40px;
+    padding-bottom: 70px;
+    z-index: 3;
+}
+
+.hero::after{ /*serve para criar uma especie de elemento invisivel que não aparece no HTML, com a função de receber estilização no css, ajudando a criar efeitos visuais como sobreposições, sombreamento, etc.*/
+    content:''; /*marca o elemento invisivel como exibivel na renderização do site.*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient( to bottom, rgba(0,0,0,0) 0%, #66311a 100%);
+    z-index: 2;
+}
+
+body{
+    background-color: #66311a;
+    color: #fdf6ee;
+
+}
+
+.cont-ouro-negro{
+    display:flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    flex-wrap: wrap;  /* em telas pequenas, quebra o layout */
+    background-color: #531500;
+    max-width: 1000px /* Limita a largura da div*/;
+    margin: 40px;
+
+
+}
+
+.cont-ouro-negro p {
+    margin: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+
+}
+
+.cont-ouro-negro img {
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+ main section h2{
+    margin-left: 600px;
+ }
+
+.cont-ouro-negro img{
+    max-width: 300px;
+    border-radius: 150px; /* Arredonda as bordas da imagem.*/
+    margin-left: 300px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.2 );
+}
+
+.cont-ouro-negro.invertido{
+    flex-direction: row-reverse;
+}
