@@ -1,5 +1,7 @@
 # Coffee Website ☕
 
+![Preview do site](./assets/preview.png)
+
 Repositório criado para acompanhar o progresso do desenvolvimento de um site com temática café.  
 Neste projeto, coloco em prática fundamentos básicos de HTML5 e CSS3.
 
